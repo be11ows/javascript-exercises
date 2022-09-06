@@ -1,9 +1,15 @@
-const fibonacci = function(n) { 
+const fibonacci = function(arg) { 
+    if(arg < 0) {
+        return "OOPS";
+    };
+    if(typeof arg === 'string'){
+        arg = +arg;
+    };
     let n1 = 0, n2 = 1, next;
     let output;
 
-        for(let i = 0; i < n; i++) {
-        if(n <= 1) {
+    for(let i = 0; i < arg; i++) {
+        if(arg <= 1) {
             return 1;
         } else {
             output = n2;
@@ -17,7 +23,7 @@ const fibonacci = function(n) {
 
 
 
-fibonacci(4);
+fibonacci("8");
 
 // Do not edit below this line
 module.exports = fibonacci;
